@@ -34,6 +34,7 @@ activemq stop
 
 - download entpacken
 - nach activemq/webapps/hawtio verschieben
+- jetty.xml anpassen
 - in activemq/conf/login.conf folgendes hinzufügen
 
 ```
@@ -43,8 +44,6 @@ karaf {
         org.apache.activemq.jaas.properties.group="groups.properties";
 };
 ```
-
-jetty.xml anpassen
 
 ## activemq
 
