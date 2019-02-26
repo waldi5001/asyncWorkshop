@@ -2,13 +2,13 @@
 
 ## Zutaten
 
-[wlp](https://developer.ibm.com/wasdev/downloads/#asset/runtimes-wlp-javaee8)
-[activeMQ](http://activemq.apache.org/activemq-5158-release.html)
-[activeMQ ResourceAdapter](https://search.maven.org/search?q=a:activemq-rar)
-[hawtio](https://github.com/hawtio/hawtio/releases)
+- [wlp](https://developer.ibm.com/wasdev/downloads/#asset/runtimes-wlp-javaee8)
+- [activeMQ](http://activemq.apache.org/activemq-5158-release.html)
+- [activeMQ ResourceAdapter](https://search.maven.org/search?q=a:activemq-rar)
+- [hawtio](https://github.com/hawtio/hawtio/releases)
 
-[eclipse](https://www.eclipse.org/downloads/)
-[maven](https://maven.apache.org/download.cgi)
+- [eclipse](https://www.eclipse.org/downloads/)
+- [maven](https://maven.apache.org/download.cgi)
 
 ## Python installation
 
@@ -27,14 +27,14 @@ activemq stop
 
 ## Links
 
-[activeMQ AdminGUI](http://HOST:8161/admin/)
-[hawtio](http://HOST:8161/hawtio/)
+- [activeMQ AdminGUI](http://HOST:8161/admin/)
+- [hawtio](http://HOST:8161/hawtio/)
 
 ## hawtio
 
-download entpacken
-nach activemq/webapps/hawtio verschieben
-in activemq/conf/login.conf folgendes hinzufügen
+- download entpacken
+- nach activemq/webapps/hawtio verschieben
+- in activemq/conf/login.conf folgendes hinzufügen
 
 ```
 karaf {
