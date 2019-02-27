@@ -15,6 +15,7 @@
 ```bash
 sudo apt-get install python python-pip
 sudo pip install paho-mqtt
+sudo pip install pika #ampq client
 ```
 
 ## Wichtige Befehle
