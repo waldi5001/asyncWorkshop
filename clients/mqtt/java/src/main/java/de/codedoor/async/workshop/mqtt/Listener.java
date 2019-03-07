@@ -33,6 +33,10 @@ class Listener implements MqttCallback {
 					System.out.println(payload);
 				}
 			});
+//			mqtt.subscribe(destination, 2, (topic, message) -> {
+//				String payload = new String(message.getPayload());
+//				System.out.println(payload);
+//			});
 		} catch (MqttException e) {
 			e.printStackTrace();
 		}
@@ -45,12 +49,12 @@ class Listener implements MqttCallback {
 
 	@Override
 	public void deliveryComplete(IMqttDeliveryToken token) {
-		System.out.println(String.format("Successfully delivered %s", token.getMessageId()));
+		System.out.println(format("Successfully delivered %s", token.getMessageId()));
 	}
 
 	@Override
 	public void connectionLost(Throwable cause) {
-		System.out.println(String.format("Connection lost: %s", cause.getMessage()));
+		System.out.println(format("Connection lost: %s", cause.getMessage()));
 	}
 
 	public static void main(String[] args) throws Exception {

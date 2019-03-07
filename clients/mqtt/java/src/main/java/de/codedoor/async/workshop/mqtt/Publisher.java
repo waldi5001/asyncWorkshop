@@ -8,10 +8,10 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 
 class Publisher {
 
-	public static void main(String[] args) throws Exception {
-		String host = env("ACTIVEMQ_HOST", "localhost");
-		int port = Integer.parseInt(env("ACTIVEMQ_PORT", "1883"));
-		final String destination = arg(args, 0, "asyncAppTopic");
+	public Publisher() {
+		String host = "localhost";
+		String port = "1883";
+		String destination = "asyncAppTopic";
 
 		try (MqttClient mqtt = new MqttClient(format("tcp://%s:%s", host, port), "publisher")) {
 			MqttConnectOptions mqttConnectOptions = new MqttConnectOptions();
@@ -25,18 +25,8 @@ class Publisher {
 		}
 	}
 
-	private static String env(String key, String defaultValue) {
-		String rc = System.getenv(key);
-		if (rc == null)
-			return defaultValue;
-		return rc;
-	}
-
-	private static String arg(String[] args, int index, String defaultValue) {
-		if (index < args.length)
-			return args[index];
-		else
-			return defaultValue;
+	public static void main(String[] args) throws Exception {
+		new Publisher();
 	}
 
 }
