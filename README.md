@@ -28,22 +28,22 @@ activemq stop
 
 ## Links
 
-- [activeMQ AdminGUI] (http://HOST:8161/admin/)
-- [hawtio] (http://HOST:8161/hawtio/)
+- [activeMQ AdminGUI](http://HOST:8161/admin/)
+- [hawtio](http://HOST:8161/hawtio/)
 
 ## Doku
-- [mqtt] (https://www.hivemq.com/tags/mqtt-essentials/)
-- [ampq 0.9.1 Konzept] (https://www.rabbitmq.com/tutorials/amqp-concepts.html)
+- [mqtt](https://www.hivemq.com/tags/mqtt-essentials/)
+- [ampq 0.9.1 Konzept](https://www.rabbitmq.com/tutorials/amqp-concepts.html)
 
 ### Python
-- [paho] (https://www.eclipse.org/paho/clients/python/)
-- [ampq 1.0 qpid tutorial] (https://qpid.apache.org/releases/qpid-proton-0.27.0/proton/python/book/tutorial.html)
-- [ampq 1.0 qpid doku] (https://qpid.apache.org/releases/qpid-proton-0.27.0/proton/python/book/overview.html)
+- [paho](https://www.eclipse.org/paho/clients/python/)
+- [ampq 1.0 qpid tutorial](https://qpid.apache.org/releases/qpid-proton-0.27.0/proton/python/book/tutorial.html)
+- [ampq 1.0 qpid doku](https://qpid.apache.org/releases/qpid-proton-0.27.0/proton/python/book/overview.html)
 
 ### Java
-- [paho] (https://www.eclipse.org/paho/clients/java/)
-- [ampq 1.0 qpid] (https://qpid.apache.org/documentation.html)
-- [jms] (http://www.java-programmieren.com/jms-tutorial.php)
+- [paho](https://www.eclipse.org/paho/clients/java/)
+- [ampq 1.0 qpid](https://qpid.apache.org/documentation.html)
+- [jms](http://www.java-programmieren.com/jms-tutorial.php)
 
 ## hawtio
 
