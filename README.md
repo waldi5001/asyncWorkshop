@@ -108,10 +108,10 @@ karaf {
 ### mqtt
 
 - Teste Last Will mit mqtt
- - 2 Listener, Der erste hört auf Last Will Topic, der zweite stirbt. Hilfe gibt es [hier](https://www.hivemq.com/blog/mqtt-essentials-part-9-last-will-and-testament/)
+  - 2 Listener, Der erste hört auf Last Will Topic, der zweite stirbt. Hilfe gibt es [hier](https://www.hivemq.com/blog/mqtt-essentials-part-9-last-will-and-testament/)
 
 - Teste persistent / non persistent Nachrichtenversand
- - Starte Listener nach Nachrichtenversand / Listener läuft beim Nachrichtenversand
+  - Starte Listener nach Nachrichtenversand / Listener läuft beim Nachrichtenversand
 
 - Teste retained Nachrichten
   - Starte Listener nach Nachrichtenversand / Listener läuft beim Nachrichtenversand.
@@ -120,21 +120,20 @@ karaf {
 - Teste unterschiedliche QoS
 
 - Teste das Fehlerverhalten beim Konsum (Exception werfen im onMessage)
- - Spiel mit den QoS Stufen und dem persistent Flag
- - Wo sind die Nachrichten gelandet, sind welche verloren gegangen?
+  - Spiel mit den QoS Stufen und dem persistent Flag
+  - Wo sind die Nachrichten gelandet, sind welche verloren gegangen?
 
 - Teste den Konsum von Nachrichten mit subtopics. 
-
- - Beispiel: main/sub/subsub/subsubsub subscribe Dich in unterschiedlichen Ebenen und schick Nachrichten in unterschiedliche Ebenen. 
- - Welche Funktionen haben die Zeichen + und # im Topicstring? Hilfe gibt es [hier](https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/)
+  - Beispiel: main/sub/subsub/subsubsub subscribe Dich in unterschiedlichen Ebenen und schick Nachrichten in unterschiedliche Ebenen. 
+  - Welche Funktionen haben die Zeichen + und # im Topicstring? Hilfe gibt es [hier](https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/)
 
 ### jms / amqp
 
 - Teste persistent / non persistent Nachrichtenversand
- - Starte Listener nach Nachrichtenversand / Listener läuft beim Nachrichtenversand  
+  - Starte Listener nach Nachrichtenversand / Listener läuft beim Nachrichtenversand  
 
 - Teste den Konsum von Nachrichten mit jms / amqp und message selektoren. 
- - Beispiel: Headerfeld alter auf 20 setzen, selector auf "alter > 20" setzen und subscriben.
+  - Beispiel: Headerfeld alter auf 20 setzen, selector auf "alter > 20" setzen und subscriben.
 
 - Teste das Fehlerverhalten beim Konsum (Exception werfen im onMessage)
- - Spiel mit dem persistent Flag Wo sind die Nachrichten gelandet, sind welche verloren gegangen?
+  - Spiel mit dem persistent Flag Wo sind die Nachrichten gelandet, sind welche verloren gegangen?
