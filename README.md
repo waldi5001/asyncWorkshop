@@ -9,6 +9,7 @@
       * [Doku](#doku)
          * [Python](#python)
          * [Java](#java)
+         * [Javascript](#javascript)
       * [hawtio](#hawtio)
       * [activemq](#activemq)
       * [Aufgaben](#aufgaben)
@@ -60,6 +61,13 @@ activemq stop
 - [paho](https://www.eclipse.org/paho/clients/java/)
 - [ampq 1.0 qpid](https://qpid.apache.org/documentation.html)
 - [jms](http://www.java-programmieren.com/jms-tutorial.php)
+
+### Javascript
+- [paho](https://www.eclipse.org/paho/clients/js/)
+- [mqtt.js](https://github.com/mqttjs/MQTT.js)
+- [sample in jsfiddle](http://jsfiddle.net/gLBsu/3/)
+- [hivemq demo](http://www.hivemq.com/demos/websocket-client/)
+
 
 ## hawtio
 
@@ -119,6 +127,9 @@ karaf {
  
 - Teste unterschiedliche QoS
 
+- Teste clean Sessions
+  - [hier](https://www.hivemq.com/blog/mqtt-essentials-part-7-persistent-session-queuing-messages/)
+
 - Teste das Fehlerverhalten beim Konsum (Exception werfen im onMessage)
   - Spiel mit den QoS Stufen und dem persistent Flag
   - Wo sind die Nachrichten gelandet, sind welche verloren gegangen?
@@ -136,4 +147,4 @@ karaf {
   - Beispiel: Headerfeld alter auf 20 setzen, selector auf "alter > 20" setzen und subscriben.
 
 - Teste das Fehlerverhalten beim Konsum (Exception werfen im onMessage)
-  - Spiel mit dem persistent Flag Wo sind die Nachrichten gelandet, sind welche verloren gegangen?
+  - Spiel mit dem persistent Flag. Wo sind die Nachrichten gelandet, sind welche verloren gegangen?
