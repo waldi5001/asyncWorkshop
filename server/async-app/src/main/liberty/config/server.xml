@@ -30,21 +30,25 @@
 	<applicationMonitor updateTrigger="mbean" />
 
 	<jmsActivationSpec id="async-app/QueueMessageConsumer">
-		<properties.activemq destination="asyncAppQueue" destinationType="javax.jms.Queue" messageSelector="" />
+		<properties.activemq useJndi="true" destination="jms/asyncAppQueue" destinationType="javax.jms.Queue" />
 	</jmsActivationSpec>
 
 	<jmsActivationSpec id="async-app/TopicMessageConsumer">
-		<properties.activemq clientId="eeClientFlorian" destination="asyncAppTopic"
+		<properties.activemq clientId="eeClientFlorian" useJndi="true" destination="jms/asyncAppTopic"
 			destinationType="javax.jms.Topic" subscriptionDurability="Durable" subscriptionName="eeSubscriptionFlorian" />
 	</jmsActivationSpec>
 
-	<jmsConnectionFactory jndiName="jms/asyncAppTopicConnectionFactory">
+	<jmsConnectionFactory jndiName="jms/asyncAppConnectionFactory">
 		<properties.activemq />
 	</jmsConnectionFactory>
 
 	<jmsTopic jndiName="jms/asyncAppTopic">
 		<properties.activemq PhysicalName="asyncAppTopic" />
 	</jmsTopic>
+
+	<jmsQueue jndiName="jms/asyncAppQueue">
+		<properties.activemq PhysicalName="asyncAppQueue" />
+	</jmsQueue>
 
 	<webApplication id="async-app" location="async-app.war" name="async-app" />
 

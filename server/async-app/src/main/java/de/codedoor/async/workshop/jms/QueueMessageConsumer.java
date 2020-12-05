@@ -4,10 +4,8 @@ import javax.annotation.Resource;
 import javax.ejb.MessageDriven;
 import javax.ejb.MessageDrivenContext;
 import javax.jms.ConnectionFactory;
-import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
-import javax.jms.Session;
 import javax.jms.Topic;
 
 import org.springframework.jms.core.JmsTemplate;
@@ -16,25 +14,19 @@ import org.springframework.jms.core.MessageCreator;
 @MessageDriven(name = "QueueMessageConsumer")
 public class QueueMessageConsumer implements MessageListener {
 
-	@Resource
-	private MessageDrivenContext mdcContext;
+    @Resource
+    private MessageDrivenContext mdcContext;
 
-	@Resource(name = "jms/asyncAppTopicConnectionFactory")
-	private ConnectionFactory topicConnectionFactory;
+    @Resource(name = "jms/asyncAppConnectionFactory")
+    private ConnectionFactory asyncAppConnectionFactory;
 
-	@Resource(name = "jms/asyncAppTopic")
-	private Topic topic;
+    @Resource(name = "jms/asyncAppTopic")
+    private Topic topic;
 
-	@Override
-	public void onMessage(Message message) {
-		System.out.println("QueueMessageConsumer: " + message);
-		JmsTemplate jmsTemplate = new JmsTemplate(topicConnectionFactory);
-		jmsTemplate.send(topic, new MessageCreator() {
-			@Override
-			public Message createMessage(Session session) throws JMSException {
-				return message;
-			}
-		});
+    @Override
+    public void onMessage(Message message) {
+        System.out.println("QueueMessageConsumer: " + message);
+        new JmsTemplate(asyncAppConnectionFactory).send(topic, (MessageCreator) session -> message);
 
 //        mdcContext.setRollbackOnly();
 //		Connection con = null;
@@ -59,6 +51,6 @@ public class QueueMessageConsumer implements MessageListener {
 //				}
 //			}
 //		}
-	}
+    }
 
 }
