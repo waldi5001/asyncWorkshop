@@ -23,19 +23,19 @@
 
 	<applicationManager autoExpand="true" />
 
-	<resourceAdapter id="activemq" location="${wlp.user.dir}/shared/lib/activemq-rar-5.15.8.rar">
-		<properties.activemq serverUrl="tcp://HOST:61616" />
+	<resourceAdapter id="activemq" location="${wlp.user.dir}shared/lib/activemq.rar">
+		<properties.activemq serverUrl="tcp://localhost:61616" />
 	</resourceAdapter>
 
 	<applicationMonitor updateTrigger="mbean" />
 
 	<jmsActivationSpec id="async-app/QueueMessageConsumer">
-		<properties.activemq destination="asyncAppQueue" destinationType="javax.jms.Queue" />
+		<properties.activemq destination="asyncAppQueue" destinationType="javax.jms.Queue" messageSelector="" />
 	</jmsActivationSpec>
 
 	<jmsActivationSpec id="async-app/TopicMessageConsumer">
-		<properties.activemq clientId="YOUR_NAME" destination="asyncAppTopic"
-			destinationType="javax.jms.Topic" subscriptionDurability="Durable" subscriptionName="YOUR_NAME" />
+		<properties.activemq clientId="eeClientFlorian" destination="asyncAppTopic"
+			destinationType="javax.jms.Topic" subscriptionDurability="Durable" subscriptionName="eeSubscriptionFlorian" />
 	</jmsActivationSpec>
 
 	<jmsConnectionFactory jndiName="jms/asyncAppTopicConnectionFactory">
