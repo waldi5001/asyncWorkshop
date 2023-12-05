@@ -12,7 +12,7 @@
 	<description>ActiveMQ AMQP Java Examples</description>
 
 	<properties>
-		<logback.version>1.2.3</logback.version>
+		<logback.version>1.2.13</logback.version>
 		<qpid.version>0.40.0</qpid.version>
 	</properties>
 
